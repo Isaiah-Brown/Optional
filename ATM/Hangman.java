@@ -42,16 +42,12 @@ public class Hangman {
             count = 0;
         }
 
-        char[] answer = possibleWord.toCharArray(); 
-        char[] word = new char[answer.length];
+        answer = possibleWord.toCharArray(); 
+        word = new char[answer.length];
         for(int i = 0; i < answer.length; i++) {
             word[i] = '_';
         }
-        char[] guessed = new char[0];
-
-        this.answer = answer;
-        this.word = word;
-        this.guessed = guessed;
+        guessed = new char[0];
         
     }
 
@@ -68,10 +64,8 @@ public class Hangman {
     }
 
 
-
     public boolean guessLetter(char guess) {
         
-        boolean goodGuess = false;
         for(int i = 0; i < guessed.length; i++) {
             if (guessed[i] == guess) {
                 System.out.println("You already guessed that letter!");
@@ -80,6 +74,7 @@ public class Hangman {
 
         }
 
+        boolean goodGuess = false;
         for(int i = 0; i < answer.length; i++) {
             if (answer[i] == guess) {
                 word[i] = guess;

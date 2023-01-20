@@ -6,8 +6,7 @@ public class Bank {
     private double balance;
 
     public Bank() {
-        double balance = 0;
-        this.balance = balance;
+        balance = 0;
     }
 
     public void deposit(double amount) {

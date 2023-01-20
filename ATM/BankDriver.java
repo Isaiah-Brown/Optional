@@ -26,7 +26,7 @@ public class BankDriver {
                         double amount = Double.valueOf(user.nextLine());
                         bank.deposit((amount));
                     } catch (Exception e) {
-                        System.out.println("Commaned not recognized");
+                        System.out.println("Command not recognized");
                     }
                    
 
@@ -36,13 +36,13 @@ public class BankDriver {
                         double amount = Double.valueOf(user.nextLine());
                         bank.withdraw(amount);
                     } catch (Exception e) {
-                        System.out.println("Commaned not recognized");
+                        System.out.println("Command not recognized");
                     }
                 
                 } else if (answer.equals("c")) {
                     bank.ToString();
                 } else if (!answer.equals("q")) {
-                    System.out.println("Commaned not recognized");
+                    System.out.println("Command not recognized");
                 }
             } else {
                 System.out.println("Commaned not recognized");
